@@ -1,12 +1,14 @@
 function sumarDigitos(num) {
-  let result = num.toString();
-  while (result.length > 1) {
-    result = result
-      .split("")
-      .reduce((total, numero) => total + Number(numero), 0)
-      .toString();
-  }
-  return Number(result);
+  if (typeof num === "number") {
+    let result = num.toString();
+    while (result.length > 1) {
+      result = result
+        .split("")
+        .reduce((total, numero) => total + Number(numero), 0)
+        .toString();
+    }
+    return Number(result);
+  } else return "Error de parametros.";
 }
 
 // Ejercicio 29 (Extra)
